@@ -1,0 +1,85 @@
+﻿@page
+@model MLGProjectManagerWeb.Pages.Projects.ListModel
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].ProjectNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectEntity[0].Responsible)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ProjectEntity)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Responsible)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
