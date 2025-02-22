@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Data.Entities
 {
     public class ProjectEntity
+        //Används för att representera och lagra projektinformation
     {
         [Key]
         public int Id { get; set; }

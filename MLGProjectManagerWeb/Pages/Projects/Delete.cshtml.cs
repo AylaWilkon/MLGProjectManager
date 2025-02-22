@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MLGProjectManagerWeb.Pages.Projects
+    //DELETE: Gör det möjligt att ta bort ett projekt från webappen.
 {
     public class DeleteModel : PageModel
     {

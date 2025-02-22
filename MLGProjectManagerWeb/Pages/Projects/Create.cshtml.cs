@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using MLGProjectManagerWeb.Models;
 
 namespace MLGProjectManagerWeb.Pages.Projects
+    //CREATE: Razor page för att skapa nya projekt i webappen och koppla de till kund
 {
     public class CreateModel : PageModel
     {

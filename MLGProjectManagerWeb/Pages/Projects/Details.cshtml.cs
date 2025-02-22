@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MLGProjectManagerWeb.Pages.Projects
+    //READ: visar detaljer för ett specifikt projekt i webappen.
 {
     public class DetailsModel : PageModel
     {

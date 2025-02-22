@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Contexts;
+//Data context skapad för att interagera med databasen i designläge
 
 public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
 {
